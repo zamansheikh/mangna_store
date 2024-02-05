@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:mangna_store/features/authentication/screens/onboarding.dart';
 import 'package:mangna_store/utils/theme/theme.dart';
 
 class App extends StatelessWidget {
@@ -7,12 +9,13 @@ class App extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Mangna Store',
       themeMode: ThemeMode.system,
       theme: MAppTheme.lightTheme,
       darkTheme: MAppTheme.darkTheme,
-      home: const Text('Hello, World!'),
+      home: const OnBoarding(),
     );
   }
 }
